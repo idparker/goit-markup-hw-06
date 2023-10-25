@@ -232,7 +232,7 @@ a {
 
 .features-list {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 72px;
 }
 
@@ -380,6 +380,7 @@ a {
 
 .portfolio-list {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   column-gap: 24px;
   row-gap: 48px;
@@ -864,4 +865,54 @@ a {
 
 .modal-send-button:hover {
   background: #404bbf;
+}
+
+/* ===== MEDIA ====== */
+
+/* ====== TABLET ======= */
+
+@media screen and (min-width: 748px) {
+  .container {
+    width: 748px;
+  }
+
+  .features-item {
+    width: 341px;
+  }
+
+  .features-list {
+    gap: 0;
+    row-gap: 72px;
+    column-gap: 24px;
+  }
+
+  .features-title {
+    display: flex;
+    align-items: start;
+  }
+
+  .portfolio-item {
+    width: 341px;
+  }
+
+  .footer-title-social {
+    text-align: start;
+  }
+
+  .footer-info {
+    width: 264px;
+  }
+
+  .footer-media {
+    width: 264px;
+  }
+
+  .socials-list {
+    justify-content: flex-start;
+  }
+
+  .modal {
+    width: 408px;
+    top: 35%;
+  }
 }

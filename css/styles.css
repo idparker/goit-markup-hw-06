@@ -1035,12 +1035,12 @@ a {
     width: 264px;
   }
 
-  .footer-form {
-    gap: 24px;
-  }
-
   .footer-media {
     width: 264px;
+  }
+
+  .footer-form {
+    gap: 24px;
   }
 
   .socials-list {

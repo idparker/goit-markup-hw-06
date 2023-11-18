@@ -29,7 +29,7 @@ body {
 }
 
 .section {
-  padding: 120px 0;
+  padding: 96px 0;
 }
 
 .container {
@@ -168,25 +168,38 @@ a {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/people-office.jpg);
+    url(../images/people-office-mob.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding: 188px 0;
+  padding: 72px 0;
   max-width: 1440px;
   margin: 0 auto;
+}
+
+@media screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx),
+  screen and (min-device-pixel-ratio: 2) {
+  .hero-section {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/people-office-mob-2x.jpg);
+  }
 }
 
 .hero-title {
   color: var(--WHITE, #fff);
   text-align: center;
-  max-width: 496px;
+  max-width: 288px;
   margin: 0 auto;
 
-  font-size: 56px;
+  font-size: 36px;
   font-weight: 700;
-  line-height: 1.07; /* 107.143% */
+  line-height: 1.11; /* 111.111% */
   letter-spacing: 0.02em;
+  text-transform: capitalize;
 }
 
 .hero-btn {
@@ -454,10 +467,11 @@ a {
 }
 
 .footer-container {
+  width: 584px;
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
-  gap: 72px;
+  gap: 72px 24px;
 }
 
 .socials-list {
@@ -659,7 +673,7 @@ a {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 72px 24px 24px 24px;
+  padding: 72px 16px 24px 16px;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -883,8 +897,7 @@ a {
 .menu-list {
   display: flex;
   flex-direction: column;
-  margin-top: 72px;
-  margin-left: 16px;
+  padding: 72px 24px 40px 16px;
   gap: 40px;
 }
 
@@ -925,7 +938,7 @@ a {
 
 @media screen and (min-width: 748px) {
   .container {
-    width: 748px;
+    width: 768px;
   }
 
   .header-container {
@@ -943,11 +956,52 @@ a {
   .contacts-list {
     display: flex;
     flex-direction: column;
-    gap: 0;
+    gap: 12px;
+  }
+
+  .contacts-link {
+    padding: 0;
+
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.16; /* 116.667% */
+    letter-spacing: 0.04em;
+  }
+
+  .hero-section {
+    padding: 112px 0;
+
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/people-office-tab.jpg);
+
+    padding: 188px 0;
+  }
+
+  @media screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx),
+    screen and (min-device-pixel-ratio: 2) {
+    .hero-section {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/people-office-tab@2x.jpg);
+    }
+  }
+
+  .hero-title {
+    font-size: 56px;
+    line-height: 1.07; /* 107.143% */
+    text-transform: none;
+
+    max-width: 496px;
   }
 
   .features-item {
-    width: 341px;
+    width: calc((100% - 24px) / 2);
   }
 
   .features-list {
@@ -961,9 +1015,17 @@ a {
     align-items: start;
   }
 
+  .team-list {
+    gap: 64px 24px;
+  }
+
   .portfolio-item {
     width: 341px;
   }
+
+  /* .footer-container {
+    width: 584px;
+  } */
 
   .footer-title-social {
     text-align: start;
@@ -983,7 +1045,9 @@ a {
 
   .modal {
     width: 408px;
-    top: 35%;
+    top: 50%;
+
+    padding: 72px 25px 24px 23px;
   }
 }
 
@@ -994,12 +1058,36 @@ a {
     width: 1158px;
   }
 
+  .section {
+    padding: 120px 0;
+  }
+
+  .contacts-link {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+  }
+
   .hero-section {
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
       url(../images/people-office.jpg);
+
+    padding: 188px 0;
+  }
+
+  @media screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx),
+    screen and (min-device-pixel-ratio: 2) {
+    .hero-section {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/people-office-2x.jpg);
+    }
   }
 
   .features-item {
@@ -1043,12 +1131,28 @@ a {
     width: calc((100% - 72px) / 4);
   }
 
+  .portfolio-item {
+    width: calc((100% - 48px) / 3);
+  }
+
   .modal {
     top: 50%;
+
+    padding: 72px 25px 24px 23px;
   }
 
   .contacts-list {
     flex-direction: row;
     gap: 40px;
+  }
+
+  .footer-container {
+    gap: 0;
+  }
+
+  .footer-media {
+    width: 208px;
+    margin-left: 120px;
+    margin-right: 80px;
   }
 }

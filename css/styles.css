@@ -467,6 +467,9 @@ a {
 }
 
 .footer-container {
+  margin: 0 auto;
+  padding: 0 15px;
+
   width: 584px;
   display: flex;
   flex-wrap: wrap;
@@ -520,6 +523,10 @@ a {
   transform: translate(-50%, -50%);
   height: 24px;
   width: 24px;
+}
+
+.footer-container {
+  width: 768px;
 }
 
 .footer-info {
@@ -977,7 +984,7 @@ a {
       ),
       url(../images/people-office-tab.jpg);
 
-    padding: 188px 0;
+    /* padding: 188px 0; */
   }
 
   @media screen and (min-resolution: 192dpi),
@@ -1020,12 +1027,12 @@ a {
   }
 
   .portfolio-item {
-    width: 341px;
+    width: calc((100% - 24px) / 2);
   }
 
-  /* .footer-container {
+  .footer-container {
     width: 584px;
-  } */
+  }
 
   .footer-title-social {
     text-align: start;
@@ -1090,7 +1097,7 @@ a {
           rgba(46, 47, 66, 0.7),
           rgba(46, 47, 66, 0.7)
         ),
-        url(../images/people-office-2x.jpg);
+        url(../images/people-office2x.jpg);
     }
   }
 
@@ -1151,6 +1158,7 @@ a {
   }
 
   .footer-container {
+    width: 1158px;
     gap: 0;
   }
 
